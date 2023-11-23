@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InformatikLernzettelQ1</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="informatik-lernzettel-q1">Informatik Lernzettel Q1</h1>
+<blockquote>
+<p>Klausur Nr. 2 - von Jonas M.</p>
+</blockquote>
+<h2 id="objektorientierte-programmierung">Objektorientierte Programmierung</h2>
+<h3 id="was-sind-klassen-methoden-und-attribute">Was sind Klassen, Methoden und Attribute?</h3>
+<ul>
+<li>Klassen in Java sind Blaupausen für Objekte</li>
+<li>Objekte übernehmen die Attribute und Methoden ihrer Klasse</li>
+<li>Attribute sind Variablen der Klasse(z.B. int y = 7;)</li>
+<li>Methoden sind ein Äquivalent zu Funktionen. Sog. Parameter, also z.B. ein Integer können der Methode beim aufrufen mitgegeben werden</li>
+<li>Beispiel: Klasse = Bauanleitung Auto, Objekt = gebautes Auto, Attribut = Farbe des Autos, Methode = lenken</li>
+</ul>
+<h3 id="uml-klassendiagramme">UML-Klassendiagramme</h3>
+
+<table>
+<thead>
+<tr>
+<th>Klasse</th>
+<th>Auto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attribute</td>
+<td>-y:int = 7</td>
+</tr>
+<tr>
+<td>Methoden</td>
+<td>+lenken(winkel:double)</td>
+</tr>
+</tbody>
+</table><ul>
+<li>UnifiedModelingLanguarge</li>
+<li>visuelle Darstellungsart einer Klasse</li>
+<li>Aufbau in die drei Bereiche: Name der Klasse, Attribute der Klasse, Methoden der Klasse</li>
+</ul>
+<h3 id="sichtbarkeit-von-attributen--methoden-in-uml-diagrammen">Sichtbarkeit von Attributen &amp; Methoden in UML-Diagrammen</h3>
+<ul>
+<li>
+<p>+ =&gt;  public</p>
+</li>
+<li>
+<p>- =&gt; private</p>
+</li>
+<li>
+<p># =&gt; protected</p>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Klasse</th>
+<th>Paket</th>
+<th>Unterklasse(selbes Paket)</th>
+<th>Unterklasse(anderes Paket)</th>
+<th>Welt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr>
+<td>kein Indikator oder package</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>private</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+<h3 id="geheimnisprinzip">Geheimnisprinzip</h3>
+<ul>
+<li>Der Zugriff auf die Daten wird aus Sicherheitsgründen und um ungewollte Manipulation zu vermeiden in ihrem Bereich/ in ihrer Sichtbarkeit beschränkt</li>
+<li>Stichwort Datenkapselung</li>
+</ul>
+<h3 id="getset-methoden">get/set-Methoden</h3>
+<ul>
+<li>
+<p>Methoden, die einen privaten Datentyp ausgeben oder überschreiben</p>
+</li>
+<li>
+<p>Beispiel:<br>
+<code>public class Klasse {</code><br>
+<code>private String name; // private = restricted access</code></p>
+<p><code>// get-Methode</code><br>
+<code>public String getName() {</code><br>
+<code>return name;</code><br>
+<code>}</code></p>
+<p><code>// set-Methode</code><br>
+<code>public void setName(String newName) {</code><br>
+<code>Klasse.name = newName;</code><br>
+<code>}</code><br>
+<code>}</code></p>
+</li>
+<li>
+<p>Vorteile:</p>
+<ul>
+<li>Bessere Kontrolle von Attributen und Methoden</li>
+<li>Option für “read-only” oder “write-only”</li>
+<li>Flexibler</li>
+<li>höhere Sicherheit der Daten</li>
+</ul>
+</li>
+</ul>
+<h3 id="konstruktoren">Konstruktoren</h3>
+<ul>
+<li>Methode in einer Klasse, die genau so heißt wie sie, und ist public</li>
+<li>Bsp.: public Main() { …</li>
+<li>Wird beim erstellen eines Objekts der Klasse ausgeführt</li>
+<li>Kann z.B. zum initialisieren von Variablen genutzt werden</li>
+<li>Kann genutzt werden, wenn gewisse Parameter für das Objekt immer benötigt werden</li>
+</ul>
+<h3 id="assoziation--aggregation">Assoziation &amp; Aggregation</h3>
+<ul>
+<li><a href="http://www.iim.maschinenbau.tu-darmstadt.de/kursunterlagen_archiv/ikt_ws1415/05/Theorie/assoziation_aggregation_komposition.html">http://www.iim.maschinenbau.tu-darmstadt.de/kursunterlagen_archiv/ikt_ws1415/05/Theorie/assoziation_aggregation_komposition.html</a></li>
+</ul>
+</div>
+</body>
+
+</html>
