@@ -11,7 +11,8 @@
 <body class="stackedit">
   <div class="stackedit__html"><h1 id="informatik-lernzettel-q1">Informatik Lernzettel Q1</h1>
 <blockquote>
-<p>Klausur Nr. 2 - von Jonas M.</p>
+<p>Klausur Nr. 2 - von Jonas M. - code kommt größtenteils von <a href="http://w3schools.com">w3schools.com</a><br>
+Bitte beachtet, dass nicht jedes Konzept, das implementiert werden muss, auch in Java Code angegeben ist</p>
 </blockquote>
 <h2 id="objektorientierte-programmierung">Objektorientierte Programmierung</h2>
 <h3 id="was-sind-klassen-methoden-und-attribute">Was sind Klassen, Methoden und Attribute?</h3>
@@ -27,18 +28,18 @@
 <table>
 <thead>
 <tr>
-<th>Klasse</th>
-<th>Auto</th>
+<th align="center">Klasse</th>
+<th align="center">Auto</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Attribute</td>
-<td>-y:int = 7</td>
+<td align="center">Attribute</td>
+<td align="center">-y:int = 7</td>
 </tr>
 <tr>
-<td>Methoden</td>
-<td>+lenken(winkel:double)</td>
+<td align="center">Methoden</td>
+<td align="center">+lenken(winkel:double)</td>
 </tr>
 </tbody>
 </table><ul>
@@ -146,9 +147,111 @@
 <li>Kann z.B. zum initialisieren von Variablen genutzt werden</li>
 <li>Kann genutzt werden, wenn gewisse Parameter für das Objekt immer benötigt werden</li>
 </ul>
-<h3 id="assoziation--aggregation">Assoziation &amp; Aggregation</h3>
+<h3 id="assoziation--aggregation-und-multiplizitäten">Assoziation &amp; Aggregation und Multiplizitäten</h3>
 <ul>
 <li><a href="http://www.iim.maschinenbau.tu-darmstadt.de/kursunterlagen_archiv/ikt_ws1415/05/Theorie/assoziation_aggregation_komposition.html">http://www.iim.maschinenbau.tu-darmstadt.de/kursunterlagen_archiv/ikt_ws1415/05/Theorie/assoziation_aggregation_komposition.html</a></li>
+</ul>
+<h2 id="such--und-sortieralgorithmen">Such- und Sortieralgorithmen</h2>
+<h3 id="arrays">Arrays</h3>
+<ul>
+<li>Arrays speichern mehrere Werte des selben Datentyps in einer einzigen Variablen</li>
+<li>Deklaration:<br>
+<code>String[] autos;</code> Deklariert den Array “cars” des Datentyps String<br>
+<code>int[] meineZahlen;</code> Deklariert den Array “meineZahlen” des Datentyps Integer</li>
+<li>Initialisierung:<br>
+<code>String[] autos = {"Volvo", "BMW", "Ford", "Mazda"};</code> Werte werden dem Array übergeben (gleichzeitige Deklaration und Initialisierung)<br>
+<code>meineZahlen[0] = 7;</code> An der Index stelle 0 wird der Wert 7 eingesetzt</li>
+</ul>
+<h3 id="for-schleifen-mit-arrays">for-Schleifen mit Arrays</h3>
+<ul>
+<li>
+<p>for-Schleifen:</p>
+<ul>
+<li><code>for (statement 1; statement 2; statement 3) { // code, der ausgeführt wird }</code></li>
+<li>s1: einmal beim erstmaligen Aufrufen der Schleife ausgeführt</li>
+<li>s2: die Bedingung für die Schleife</li>
+<li>s3: wird nach jedem Durchlauf des Codes ausgeführt</li>
+<li><code>for (i = 0;i &lt; 9;i++) { //code }</code></li>
+</ul>
+</li>
+<li>
+<p>Array ausgeben lassen:<br>
+<code>String[] autos = {"Volvo", "BMW", "Ford", "Mazda"};</code><br>
+<code>for (int i = cars.length - 1;i &gt;= 0;i--) {</code><br>
+<code>System.out.println(cars[i]);</code><br>
+<code>}</code><br>
+Output: Mazda Ford BMW Volvo</p>
+<p><code>String[] autos = {"Volvo", "BMW", "Ford", "Mazda"};</code><br>
+<code>for (int i = 0;i &lt; cars.length;i++) {</code><br>
+<code>System.out.println(cars[i]);</code><br>
+<code>}</code><br>
+Output: Volvo BMW Ford Mazda</p>
+</li>
+<li>
+<p>Array anlegen:<br>
+<code>int[] numb = new int[10];</code> Gibt dem Array den Wert 0 an den Stellen 0-9<br>
+<code>for (int i = 0;i &lt; 10;i++) {</code><br>
+<code>numb[i] = i * 2;</code><br>
+<code>}</code><br>
+numb = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18}</p>
+</li>
+</ul>
+<h3 id="zweidimensionale-arrays">Zweidimensionale Arrays</h3>
+<ul>
+<li>Array im Array oder Tabelle</li>
+<li>zwei Indizes</li>
+<li><code>int[][] numb2 = { {1, 2, 3, 4}, {5, 6, 7} };</code><br>
+<code>numb2[0][2] == 3</code></li>
+<li>Hinweis: Arrays beginnen mit dem Index 0</li>
+</ul>
+<h3 id="objekte-in-arrays">Objekte in Arrays</h3>
+<ul>
+<li><code>Fahrrad[] listeFahrraeder = new Fahrrad[5];</code> 5 = länge des Arrays aka. Anzahl möglicher Objekte<br>
+<code>listeFahrraeder[0] = new Fahrrad("grün", "cube");</code></li>
+</ul>
+<h3 id="länge-eines-arrays">Länge eines Arrays</h3>
+<ul>
+<li>Array.length</li>
+<li>listeFahrraeder.length == 5</li>
+</ul>
+<h3 id="linearer-suchalgorithmus">Linearer Suchalgorithmus</h3>
+<ul>
+<li>der Array wird ein Element nach dem anderen durchsucht</li>
+<li>langsam, aber funktioniert immer</li>
+</ul>
+<h3 id="binärer-suchalgorithmus">Binärer Suchalgorithmus</h3>
+<ul>
+<li>kann bei einem geordnetem Array genutzt werden</li>
+<li>Wert in der Mitte des Arrays wird mit Suchwert verglichen, wenn kleiner, wird die Hälfte der Hälfte abgezogen, wenn größer hinzugefügt, dann wird wiederholt</li>
+<li>log2(n) + 1 = Wiederholungen bis zur Lösung</li>
+<li>deutlich schneller, benötigt aber eine Sortierte Liste</li>
+</ul>
+<h3 id="struktogramme">Struktogramme</h3>
+<ul>
+<li><a href="https://unterrichten.zum.de/images/3/3d/Struktogramm-Mustererkennung.svg#">https://unterrichten.zum.de/images/3/3d/Struktogramm-Mustererkennung.svg#</a></li>
+</ul>
+<h3 id="sortieralgorithmen">Sortieralgorithmen</h3>
+<ul>
+<li>Selection Sort
+<ul>
+<li>ganzes Array wird durchlaufen, um den kleinsten Wert zu finden</li>
+<li>kleinste Wert wird mit Wert an erster Stelle getauscht</li>
+<li>verfahren wird wiederholt, nur ohne den ersten Wert</li>
+</ul>
+</li>
+<li>Insertion Sort
+<ul>
+<li>Erster Wert sortierter Bereich</li>
+<li>zweiter Wert wird hinzugefügt, je nachdem, ob er größer oder kleiner ist vor oder nach dem ersten Wert</li>
+<li>Sortierter Bereich ist nun der erste und zweite Wert</li>
+</ul>
+</li>
+<li>Bubble Sort
+<ul>
+<li>Erster und zweiter Wert werden verglichen, wenn nötig getauscht, dann der zweite und dritte usw.</li>
+<li>Nach einem Durchlauf ist die größte Zahl am richtigen Ort und das verfahren kann ohne sie wiederholt werden</li>
+</ul>
+</li>
 </ul>
 </div>
 </body>
